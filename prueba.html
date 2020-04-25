@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    <script src="js/jszip.min.js"></script>
+
+</head>
+<body>
+
+<div class="main">
+    <table id="grid">
+    </table>
+</div>
+                        
+<div class="box wide hidden-on-narrow">
+    <div class="box-col">
+        <center>
+            <button class='cerrar-pedido k-button'>Cerrar Pedido</button>
+        </center>
+    </div>
+</div>
+
+
+<script>
+$(document).ready(function() {
+
+
+    $(".cerrar-pedido").click(function() {
+        
+        alert("Cerrando Pedido");
+
+    });
+
+
+});    
+</script>
+
+<script>
+//    edit:function(e){  
+//							var title = $(e.container).parent().find(".k-window-title");
+//   						var update = $(e.container).parent().find(".k-grid-update");  
+//							var cancel = $(e.container).parent().find(".k-grid-cancel");             
+//							e.container.kendoWindow("title","修 改");
+//							$(title).text('修 改');
+//        					$(update).html('<span class="k-icon k-update"></span>Grabar');
+//							$(cancel).html('<span class="k-icon k-cancel"></span>Cancelar');
+//				}
+    $(function() {
+    
+        var carrito = [
+            { Articulo:"1", Descripcion:"Dulce Leche 500 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:100,DescDirecto:10,DescRegla:0,Precio:90,Cantidad:1,foto:"foto_03.jpg"},
+            { Articulo:"2", Descripcion:"Dulce Leche 250 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:60,DescDirecto:10,DescRegla:0,Precio:54,Cantidad:1,foto:"foto_03.jpg"},
+            { Articulo:"3", Descripcion:"Dulce Leche 125 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:100,DescDirecto:10,DescRegla:0,Precio:90,Cantidad:1,foto:"foto_03.jpg"},
+            { Articulo:"4", Descripcion:"Dulce Leche 250 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:60,DescDirecto:10,DescRegla:0,Precio:54,Cantidad:1,foto:"foto_03.jpg"},
+            { Articulo:"5", Descripcion:"Dulce Leche 500 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:100,DescDirecto:10,DescRegla:0,Precio:90,Cantidad:1,foto:"foto_01.jpg"},
+            { Articulo:"6", Descripcion:"Dulce Leche 250 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:60,DescDirecto:10,DescRegla:0,Precio:54,Cantidad:1,foto:"foto_03.jpg"},
+            { Articulo:"7", Descripcion:"Dulce Leche 500 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:100,DescDirecto:10,DescRegla:0,Precio:90,Cantidad:1,foto:"foto_02.jpg"},
+            { Articulo:"8", Descripcion:"Dulce Leche 250 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:60,DescDirecto:10,DescRegla:0,Precio:54,Cantidad:1,foto:"foto_04.jpg"}
+        ]
+    
+        $("#grid").kendoGrid({
+            editable: "inline",
+            // toolbar: ["create"],
+            toolbar: [{ className: "btn-create", name: "create", text: "Agregar" }],
+            
+            columns: [
+            { title:"Articulo", field:"Articulo", width:"80px" },
+            { title:"Descripci&oacuten", field:"Descripcion", width:"200px" },
+            { title:"Cod.Rubro", field: "CodRubro", width:"80px"},
+            { title:"Desc.Rubro", field:"DescRubro", width:"200px" },
+            { title:"Cod.Promo", field:"CodPromo", width:"80px" },
+            { title:"Precio Lista", field:"PrecioLista", width:"80px"},
+            { title:"Desc.Directo", field:"DescDirecto", width:"80px" },
+            { title:"Desc.Regla", field:"DescRegla", width:"80px"},
+            { title:"Precio", field:"Precio", width:"80px"},
+            { title:"Cantidad", field:"Cantidad", width:"80px"},
+            // { title:"Foto", field:"foto", template:"<img src='#= foto #' />"},
+            // { command: ["edit", "destroy"], title: "&nbsp;", width: "250px" }  
+            { command: [{ className: "btn-destroy", name: "destroy", text: "Borrar" },
+                        { className: "btn-edit", name: "edit", text: "Modificar" },] }
+ 
+            ],
+            editable:"inline",
+            dataSource: {
+                data: carrito,
+                pageSize: 5
+            },
+            heigth: 100,
+            scrollable: true,
+            pageable: true,
+            sortable: { mode:"multiple"}
+        }
+
+        )
+    })
+</script>
+</body>
+</html>

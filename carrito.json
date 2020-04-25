@@ -1,0 +1,8 @@
+{ Articulo:"1", Descripcion:"Dulce Leche 500 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:100,DescDirecto:10,DescRegla:0,Precio:90,Cantidad:1,foto:"foto_03.jpg"},
+{ Articulo:"2", Descripcion:"Dulce Leche 250 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:60,DescDirecto:10,DescRegla:0,Precio:54,Cantidad:1,foto:"foto_03.jpg"},
+{ Articulo:"3", Descripcion:"Dulce Leche 125 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:100,DescDirecto:10,DescRegla:0,Precio:90,Cantidad:1,foto:"foto_03.jpg"},
+{ Articulo:"4", Descripcion:"Dulce Leche 250 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:60,DescDirecto:10,DescRegla:0,Precio:54,Cantidad:1,foto:"foto_03.jpg"},
+{ Articulo:"5", Descripcion:"Dulce Leche 500 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:100,DescDirecto:10,DescRegla:0,Precio:90,Cantidad:1,foto:"foto_01.jpg"},
+{ Articulo:"6", Descripcion:"Dulce Leche 250 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:60,DescDirecto:10,DescRegla:0,Precio:54,Cantidad:1,foto:"foto_03.jpg"},
+{ Articulo:"7", Descripcion:"Dulce Leche 500 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:100,DescDirecto:10,DescRegla:0,Precio:90,Cantidad:1,foto:"foto_02.jpg"},
+{ Articulo:"8", Descripcion:"Dulce Leche 250 gr", CodRubro:"1", DescRubro:"DULCES",CodPromo:"1",PrecioLista:60,DescDirecto:10,DescRegla:0,Precio:54,Cantidad:1,foto:"foto_04.jpg"}

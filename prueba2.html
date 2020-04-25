@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="splitter">
+        <div id="left">
+            <div class="inner">
+                <h3>Agregar</h3>
+            </div>
+        </div>
+        <div id="middle">
+            <div class="main">
+                <table id="grid">
+                </table>
+            </div>
+                        
+        </div>
+        <div id="right">
+            <div class="inner">
+                <h3>Modificar</h3>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+    $(function() {
+    
+        var carrito = [
+        ]
+    
+        $("#grid").kendoGrid({
+            editable: "inline",
+            columns: [
+            { title:"Articulo", field:"Articulo" },
+            { title:"Descripci&oacuten", field:"Descripcion"},
+            { title:"Cod.Rubro", field: "CodRubro"},
+            { title:"Desc.Rubro", field:"DescRubro" },
+            { title:"Cod.Promo", field:"CodPromo" },
+            { title:"Precio Lista", field:"PrecioLista"},
+            { title:"Desc.Directo", field:"DescDirecto" },
+            { title:"Desc.Regla", field:"DescRegla"},
+            { title:"Precio", field:"Precio" },
+            { title:"Cantidad", field:"Cantidad"},
+            { title:"Foto", field:"foto", template:"<img src='#= foto #' />"}    
+            ],
+            dataSource: {
+                data: carrito,
+                pageSize: 5
+            },
+            heigth: 100,
+            scrollable: true,
+            pageable: true,
+            sortable: { mode:"multiple"}
+        }
+
+        )
+    })
+</script>
+</body>
+</html>
